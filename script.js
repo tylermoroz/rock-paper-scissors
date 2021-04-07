@@ -42,8 +42,10 @@ function game() {
 }
     if (player < computer) {
         alert("Computer wins the game! " + computer + "-" + player);
-    } else {
+    } else if (player > computer) {
         alert("Player wins the game! " + player + "-" + computer);
+    } else {
+        alert("Tie game! " + player + "-" + computer);
     }
 }
 
