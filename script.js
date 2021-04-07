@@ -38,9 +38,11 @@ function game() {
 
     function winner() {
         if (computer === 5) {
-            alert(`Computer wins the game! ${computer} - ${player}`);
+            alert(`Computer wins the game:   ${computer} - ${player}
+Refresh the page to play again!`);
         } else if (player === 5) {
-            alert(`Player wins the game! ${player} - ${computer}`);
+            alert(`Player wins the game:   ${player} - ${computer}
+Refresh the page to play again!`);
         }
     }
     winner();    
