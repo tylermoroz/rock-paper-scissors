@@ -1,6 +1,5 @@
-let compChoice = ["Rock", "Paper", "Scissors"];
-
 function computerPlay() {
+    let compChoice = ["Rock", "Paper", "Scissors"];
     let result = (compChoice[Math.floor(Math.random() * compChoice.length)]);
     return result;
 }
@@ -12,7 +11,7 @@ function game() {
     let computer = 0;
 
     do {
-    const playerSelection = prompt('What is your move?', '');
+    const playerSelection = prompt('Rock, Paper or Scissors?', '');
     const computerSelection = computerPlay();
 
     function playRound(playerSelection, computerSelection) {
@@ -24,9 +23,13 @@ function game() {
         } else if (str === 'Rock' && computerSelection === 'Scissors' || str === 'Paper' && computerSelection === 'Rock' || str === 'Scissors' && computerSelection === 'Paper') {
             player += 1;
             return `You Win! ${str} beats ${computerSelection}. computer: ${computer} player: ${player}`;
-        } else {
+        } else if (str === computerSelection) {
             return `Tie Round! computer: ${computer} player: ${player}`;
-        }
+        } else if (str === 'Nuke'){
+            alert(`Wait... That's illegal!`)
+        } else if (str !== 'Rock' || str !== 'Paper' || str !== 'Scissors' || str !== 'Nuke') {
+            alert(`Please enter a valid answer.`);
+        } 
     }
         console.log(playRound(playerSelection, computerSelection));
 } while (computer < 5 && player < 5)
