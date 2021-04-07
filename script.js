@@ -26,10 +26,12 @@ function game() {
         } else if (str === computerSelection) {
             return `Tie Round! computer: ${computer} player: ${player}`;
         } else if (str === 'Nuke'){
-            alert(`Wait... That's illegal!`)
+            player -= player;
+            computer -= computer;
+            alert(`Wait... That's illegal! Restarting Game...`)
         } else if (str !== 'Rock' || str !== 'Paper' || str !== 'Scissors' || str !== 'Nuke') {
             alert(`Please enter a valid answer.`);
-        } 
+        }
     }
         console.log(playRound(playerSelection, computerSelection));
 } while (computer < 5 && player < 5)
