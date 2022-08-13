@@ -8,6 +8,12 @@ const newGameBtn = document.querySelector('#new-game');
 const rock = document.getElementById('Rock');
 const paper = document.getElementById('Paper');
 const scissors = document.getElementById('Scissors');
+roundResult.style.color = 'aquamarine';
+roundResult.style.fontSize = '22px';
+roundResult.style.textShadow = '0px 0px 8px aquamarine';
+finalResult.style.color = 'aquamarine';
+finalResult.style.fontSize = '22px';
+finalResult.style.textShadow = '0px 0px 8px aquamarine';
 
 
 function game() {

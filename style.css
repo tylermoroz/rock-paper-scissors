@@ -1,0 +1,41 @@
+body {
+    height: auto;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title {
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: aquamarine;
+    text-shadow: 0 2px 12px aquamarine;
+    font-size: 24px;
+}
+
+button {
+    border-radius: 50px;
+    height: 90px;
+    width: 200px;
+    background-color: cadetblue;
+    color: aquamarine;
+    border: none;
+    box-shadow: 0 0 6px 5px aquamarine;
+    font-size: 24px;
+    margin: 10px;
+    text-shadow: 0px 0px 8px aquamarine;
+    cursor: pointer;
+}
+
+#new-game-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#new-game {
+    height: 30px;
+    width: 175px;
+}
