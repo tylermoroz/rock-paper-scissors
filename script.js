@@ -18,32 +18,32 @@ function game() {
             return result;
         }
         
-        // function winner() {
-        //     if (computer === 5) {
-        //         finalResult.textContent = `Computer wins the game:   ${computer} - ${player}    Press 'New Game' to play again`;
-        //         score.removeChild(roundResult);
-        //         player = 0;
-        //         computer = 0;
-        //         rock.disabled = true;
-        //         paper.disabled = true;
-        //         scissors.disabled = true;
-        //     } else if (player === 5) {
-        //         finalResult.textContent = `Player wins the game:   ${player} - ${computer}    Press 'New Game' to play again`;
-        //         score.removeChild(roundResult);
-        //         player = 0;
-        //         computer = 0;
-        //         rock.disabled = true;
-        //         paper.disabled = true;
-        //         scissors.disabled = true;
-        //     } else if (computer < 5 || player < 5) {
-        //         score.removeChild(finalResult);
-        //     }
-        //     score.appendChild(finalResult);
-        // }
+        function winner() {
+            if (computer === 5) {
+                finalResult.textContent = `Computer wins the game:   ${computer} - ${player}    Press 'New Game' to play again`;
+                score.removeChild(roundResult);
+                player = 0;
+                computer = 0;
+                rock.disabled = true;
+                paper.disabled = true;
+                scissors.disabled = true;
+            } else if (player === 5) {
+                finalResult.textContent = `Player wins the game:   ${player} - ${computer}    Press 'New Game' to play again`;
+                score.removeChild(roundResult);
+                player = 0;
+                computer = 0;
+                rock.disabled = true;
+                paper.disabled = true;
+                scissors.disabled = true;
+            } else if (computer < 5 || player < 5) {
+                score.removeChild(finalResult);
+            }
+            score.appendChild(finalResult);
+        }
         
         function restartGame() {
             newGameBtn.addEventListener('click', () => {
-                if (computer < 5 && player < 5 || computer >= 5 || player >= 5) {
+                if (computer < 5 && player < 5) {
                     score.removeChild(roundResult);
                     computer = 0;
                     player = 0;
@@ -51,18 +51,18 @@ function game() {
             }); 
         }
         
-        // function newGame() {
-        //     newGameBtn.addEventListener('click', () => {
-        //         if (winner) {
-        //             score.removeChild(finalResult);
-        //             computer = 0;
-        //             player = 0;
-        //             rock.disabled = false;
-        //             paper.disabled = false;
-        //             scissors.disabled = false;
-        //         }
-        //     }); 
-        // }
+        function newGame() {
+            newGameBtn.addEventListener('click', () => {
+                if (winner) {
+                    score.removeChild(finalResult);
+                    computer = 0;
+                    player = 0;
+                    rock.disabled = false;
+                    paper.disabled = false;
+                    scissors.disabled = false;
+                }
+            }); 
+        }
 
 
         function playRound(playerSelection, computerSelection) {
