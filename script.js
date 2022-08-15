@@ -8,12 +8,12 @@ const newGameBtn = document.querySelector('#new-game');
 const rock = document.getElementById('Rock');
 const paper = document.getElementById('Paper');
 const scissors = document.getElementById('Scissors');
-roundResult.style.color = 'aquamarine';
+roundResult.style.color = 'white';
 roundResult.style.fontSize = '44px';
-roundResult.style.textShadow = '0px 0px 8px aquamarine';
-finalResult.style.color = 'aquamarine';
+roundResult.style.textShadow = '0px 0px 10px white';
+finalResult.style.color = 'white';
 finalResult.style.fontSize = '44px';
-finalResult.style.textShadow = '0px 0px 8px aquamarine';
+finalResult.style.textShadow = '0px 0px 10px white';
 
 
 function game() {
