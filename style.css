@@ -20,12 +20,10 @@ button {
     height: 180px;
     width: 400px;
     background-color: black;
-    color: white;
     border: none;
     box-shadow: 0 0 8px 5px white;
     font-size: 36px;
     margin: 20px;
-    text-shadow: 0px 0px 10px white;
     cursor: pointer;
 }
 
@@ -46,12 +44,31 @@ button {
     width: 350px;
 }
 
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.base-glow {
+    color: white;
+    text-shadow: 0px 0px 10px white;
+}
+
+.highlight-glow {
+    color: aquamarine;
+    text-shadow: 0px 0px 10px aquamarine;
+}
+
 img {
     width: 100px;
 }
 
-.filter-color {
+.base-color {
     filter: invert(97%) sepia(12%) saturate(482%) hue-rotate(267deg) brightness(118%) contrast(100%);
+}
+
+.highlight-color {
+    filter: invert(83%) sepia(68%) saturate(341%) hue-rotate(80deg) brightness(110%) contrast(101%);
 }
 
 #fist {
